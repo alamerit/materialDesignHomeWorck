@@ -16,6 +16,7 @@ import java.util.Objects;
 
 public class ToolbarActivit extends AppCompatActivity {
     private static final String TAG = "Activity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -18,4 +18,5 @@
     <string name="password">Введите пароль</string>
     <string name="input">Войти</string>
     <string name="title_activity_toolbar">ToolbarActivit</string>
+    <string name="clous">Закрыть</string>
 </resources>
