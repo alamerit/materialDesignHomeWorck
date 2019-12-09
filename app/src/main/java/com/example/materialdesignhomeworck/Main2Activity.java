@@ -1,17 +1,18 @@
 package com.example.materialdesignhomeworck;
 
+
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class Main2Activity extends AppCompatActivity {
     EditText editText;
@@ -37,14 +38,14 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     protected  void initUi() {
-        editText = findViewById(R.id.editText);
+        editText = findViewById(R.id.editTextPusword);
         editText.setOnKeyListener(new View.OnKeyListener()
         {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if( editText.getText().length() > 10 ) {
-                      Toast.makeText(v.getContext(), "так то-же не работает $ \n это перекрывает клавиатуру ", Toast.LENGTH_SHORT).show();
-                    }
+                    Toast.makeText(v.getContext(), "так то-же не работает $ \n это перекрывает клавиатуру ", Toast.LENGTH_SHORT).show();
+                }
 
                 return false;
             }
@@ -58,6 +59,11 @@ public class Main2Activity extends AppCompatActivity {
 
         if(editText.getText().length()== 0){
             Snackbar.make( view, "Так не работает", Snackbar.LENGTH_SHORT).show();
+
+        }
+        else {
+            Intent intent = new Intent(Main2Activity.this, ActivityNavigation.class);
+            startActivity(intent);
 
         }
 
